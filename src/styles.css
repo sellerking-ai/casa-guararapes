@@ -1,0 +1,101 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-whatsapp: #25D366;
+  
+  --font-barlow: "Barlow", sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: #f2f5fa;
+  --foreground: #0d1f3c;
+  --card: #ffffff;
+  --card-foreground: #0d1f3c;
+  --popover: #ffffff;
+  --popover-foreground: #0d1f3c;
+  --primary: #0d2d5e;
+  --primary-foreground: #ffffff;
+  --secondary: #1a4a8f;
+  --secondary-foreground: #ffffff;
+  --muted: #f2f5fa;
+  --muted-foreground: #6b7280;
+  --accent: #1e6fd4;
+  --accent-foreground: #ffffff;
+  --highlight: #f5a800;
+  --highlight-foreground: #0d2d5e;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #1e6fd4;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-barlow);
+  }
+}
+
+@keyframes pulse-whatsapp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.animate-pulse-whatsapp {
+  animation: pulse-whatsapp 2s infinite ease-in-out;
+}
+
+/* Quantum Lovable - watermark removal */
+#lovable-badge {
+  display: none !important;
+}
+a[href*="lovable.dev"],
+iframe[src*="lovable.dev"],
+div[style*="Edit with Lovable"],
+.lovable-badge {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
+
