@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { 
-  Phone, 
-  MessageCircle, 
-  MapPin, 
-  Clock, 
-  ShieldCheck, 
+import {
+  Phone,
+  MessageCircle,
+  MapPin,
+  Clock,
+  ShieldCheck,
   Star,
   ExternalLink,
   Truck,
@@ -23,10 +23,10 @@ import {
 import { SectorCard } from "../components/SectorCard";
 import { FloatingWhatsApp } from "../components/FloatingWhatsApp";
 import logo from "../assets/logo.png";
-import lojaFachada from "../assets/loja-fachada.png.asset.json";
-import equipeLoja from "../assets/equipe-loja.jpg.asset.json";
-import equipeConstrucao from "../assets/equipe-construcao.jpg.asset.json";
-import equipeHistoria from "../assets/equipe-historia.jpg.asset.json";
+import lojaFachada from "../assets/loja-fachada.png";
+import equipeLoja from "../assets/equipe-loja.jpg";
+import equipeConstrucao from "../assets/equipe-construcao.jpg";
+import equipeHistoria from "../assets/equipe-historia.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -90,9 +90,9 @@ function Index() {
         <div className="max-w-7xl mx-auto w-full flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Link to="/">
-              <img 
+              <img
                 src={logo}
-                alt="Casa Guararapes - Toda Casa" 
+                alt="Casa Guararapes - Toda Casa"
                 className="h-10 md:h-12 w-auto object-contain"
               />
             </Link>
@@ -103,14 +103,14 @@ function Index() {
               <Phone size={20} className="text-white" />
               <a href="tel:3733811492" className="font-bold text-lg hover:text-white/80 transition-colors">(37) 3381-1492</a>
             </div>
-            <a 
-              href="https://api.whatsapp.com/send/?phone=5537999697190&text&type=phone_number&app_absent=0" 
-              target="_blank" 
+            <a
+              href="https://api.whatsapp.com/send/?phone=5537999697190&text&type=phone_number&app_absent=0"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-[#1e6fd4] text-white px-4 md:px-8 py-2.5 rounded-[50px] font-black uppercase text-sm md:text-base flex items-center gap-2 hover:brightness-110 transition-all shadow-md animate-pulse-whatsapp"
             >
-              <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
                 alt="WhatsApp"
                 className="w-[22px] h-[22px]"
               />
@@ -123,11 +123,8 @@ function Index() {
       <main>
         {/* HERO */}
         <section className="relative bg-gradient-to-r from-[#0d2d5e] to-[#123975] text-white pt-16 pb-24 md:pt-28 md:pb-40 px-4 md:px-8 overflow-hidden">
-          {/* Fundo sólido e limpo removendo o padrão anterior */}
-          
-          
           <div className="max-w-7xl mx-auto relative z-10 grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -139,14 +136,14 @@ function Index() {
                 Da construção à decoração, tudo para sua casa!
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
+                <button
                   onClick={scrollToSectors}
                   className="bg-[#1e6fd4] text-white px-10 py-5 rounded-[50px] font-black uppercase text-lg hover:brightness-110 transition-all shadow-xl text-center active:scale-95"
                 >
                   Ver Setores
                 </button>
-                <a 
-                  href="https://www.google.com/maps/place/Casa+Guararapes+Toda+Casa/data=!4m2!3m1!1s0x0:0x3ee34eff551ec7e7?sa=X&ved=1t:2428&ictx=111" 
+                <a
+                  href="https://www.google.com/maps/place/Casa+Guararapes+Toda+Casa/data=!4m2!3m1!1s0x0:0x3ee34eff551ec7e7?sa=X&ved=1t:2428&ictx=111"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="border-2 border-white text-white px-10 py-5 rounded-[50px] font-black uppercase text-lg hover:bg-white hover:text-[#0d2d5e] transition-all text-center flex items-center justify-center gap-2 active:scale-95"
@@ -155,7 +152,7 @@ function Index() {
                 </a>
               </div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.9, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -163,8 +160,8 @@ function Index() {
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] border-4 border-white">
-                <img 
-                  src={lojaFachada.url}
+                <img
+                  src={lojaFachada}
                   alt="Loja Casa Guararapes - Fachada"
                   className="w-full aspect-[4/3] object-cover"
                 />
@@ -174,8 +171,6 @@ function Index() {
               </div>
             </motion.div>
           </div>
-          
-          {/* Divisor removido para um visual mais limpo */}
         </section>
 
         {/* SEÇÃO DE SETORES */}
@@ -197,7 +192,7 @@ function Index() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <SectorCard 
+                  <SectorCard
                     icon={sector.icon}
                     title={sector.title}
                     description={sector.description}
@@ -276,9 +271,9 @@ function Index() {
             </div>
 
             <div className="text-center">
-              <a 
-                href="https://www.google.com/maps/place/Casa+Guararapes+Toda+Casa/data=!4m8!3m7!1s0xa0934eefe9def3:0x3ee34eff551ec7e7!8m2!3d-20.4431528!4d-44.7653817!9m1!1b1!16s%2Fg%2F1tj5940d" 
-                target="_blank" 
+              <a
+                href="https://www.google.com/maps/place/Casa+Guararapes+Toda+Casa/data=!4m8!3m7!1s0xa0934eefe9def3:0x3ee34eff551ec7e7!8m2!3d-20.4431528!4d-44.7653817!9m1!1b1!16s%2Fg%2F1tj5940d"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#1e6fd4] text-white px-10 py-5 rounded-[50px] font-black uppercase text-lg hover:brightness-110 transition-all shadow-xl active:scale-95"
               >
@@ -305,8 +300,8 @@ function Index() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { img: equipeLoja.url, title: "Loja & Decoração", desc: "Atendimento dedicado em móveis, eletrodomésticos e decoração." },
-                { img: equipeConstrucao.url, title: "Material de Construção", desc: "Especialistas para te orientar do alicerce ao acabamento." }
+                { img: equipeLoja, title: "Loja & Decoração", desc: "Atendimento dedicado em móveis, eletrodomésticos e decoração." },
+                { img: equipeConstrucao, title: "Material de Construção", desc: "Especialistas para te orientar do alicerce ao acabamento." }
               ].map((team, i) => (
                 <motion.div
                   key={i}
@@ -359,7 +354,7 @@ function Index() {
               >
                 <div className="rounded-[24px] overflow-hidden shadow-[0_20px_50px_rgba(13,45,94,0.25)] border-4 border-[#1e6fd4]/20">
                   <img
-                    src={equipeHistoria.url}
+                    src={equipeHistoria}
                     alt="Equipe Casa Guararapes - Orgulho de ser claudiense"
                     className="w-full aspect-[4/3] object-cover"
                   />
@@ -407,7 +402,7 @@ function Index() {
         <section className="py-24 px-4 md:px-8 bg-[#0d2d5e]">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-16 text-center uppercase tracking-tighter">Onde Estamos</h2>
-            
+
             <div className="grid md:grid-cols-2 gap-12 items-start">
               <div className="space-y-6">
                 <div className="bg-[#1a4a8f] p-8 rounded-[16px] shadow-sm border border-white/10">
@@ -417,9 +412,9 @@ function Index() {
                   <p className="text-white/90 text-lg mb-8 font-medium">
                     Praça dos Ex-Combatentes, 56 - Centro, Cláudio - MG, 35530-000
                   </p>
-                  <a 
-                    href="https://www.google.com/maps/place/Casa+Guararapes+Toda+Casa/data=!4m2!3m1!1s0x0:0x3ee34eff551ec7e7?sa=X&ved=1t:2428&ictx=111" 
-                    target="_blank" 
+                  <a
+                    href="https://www.google.com/maps/place/Casa+Guararapes+Toda+Casa/data=!4m2!3m1!1s0x0:0x3ee34eff551ec7e7?sa=X&ved=1t:2428&ictx=111"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-full inline-flex justify-center items-center gap-2 bg-white text-[#0d2d5e] px-8 py-4 rounded-[50px] font-black uppercase text-lg hover:bg-white/90 transition-all shadow-lg active:scale-95"
                   >
@@ -445,13 +440,13 @@ function Index() {
               </div>
 
               <div className="h-[500px] rounded-[16px] overflow-hidden border-[3px] border-white relative group">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.03704987627!2d-44.76757042504269!3d-20.443152755250495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3ee34eff551ec7e7!2sCasa%20Guararapes%20Toda%20Casa!5e0!3m2!1spt-BR!2sbr!4v1715520000000!5m2!1spt-BR!2sbr" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={true} 
-                  loading="lazy" 
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3741.03704987627!2d-44.76757042504269!3d-20.443152755250495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3ee34eff551ec7e7!2sCasa%20Guararapes%20Toda%20Casa!5e0!3m2!1spt-BR!2sbr!4v1715520000000!5m2!1spt-BR!2sbr"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="grayscale group-hover:grayscale-0 transition-all duration-700"
                 ></iframe>
@@ -468,7 +463,6 @@ function Index() {
             <div className="flex flex-col gap-6">
               <div className="flex items-center gap-2">
                 <img src={logo} alt="Casa Guararapes - Toda Casa" className="h-10 w-auto" />
-                
               </div>
               <p className="text-white/60 text-lg leading-relaxed font-medium">
                 O maior mix da região em móveis, eletrodomésticos, material de construção e utilidades.
@@ -520,12 +514,12 @@ function Index() {
               </div>
             </div>
           </div>
-          
+
           <div className="pt-8 border-t border-white/10 text-center flex flex-col items-center gap-4">
-            <img 
-              src={logo} 
-              alt="Casa Guararapes" 
-              className="h-8 md:h-10 w-auto" 
+            <img
+              src={logo}
+              alt="Casa Guararapes"
+              className="h-8 md:h-10 w-auto"
             />
             <p className="text-white/30 text-sm font-bold uppercase tracking-widest">
               © 2026 Casa Guararapes. SUA CASA COMO VOCÊ IMAGINA!
