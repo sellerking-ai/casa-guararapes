@@ -372,7 +372,7 @@ function Index() {
                 className="space-y-6"
               >
                 <p className="text-[#0d2d5e] text-lg md:text-xl leading-relaxed font-medium">
-                  A <span className="font-black text-[#1e6fd4]">Casa Guararapes</span> nasceu em 1986 com um sonho simples: oferecer à cidade de <strong>Cláudio - MG</strong> um lugar onde as famílias pudessem encontrar tudo para construir, mobiliar e decorar seus lares com preço justo e atendimento de verdade.
+                  A <span className="font-black text-[#1e6fd4]">Casa Guararapes</span> nasceu em 1985 com um sonho simples: oferecer à cidade de <strong>Cláudio - MG</strong> um lugar onde as famílias pudessem encontrar tudo para construir, mobiliar e decorar seus lares com preço justo e atendimento de verdade.
                 </p>
                 <p className="text-gray-600 text-lg md:text-xl leading-relaxed font-medium">
                   Ao longo de <span className="bg-[#f5a800] text-[#0d2d5e] px-2 py-0.5 font-black rounded">40 anos</span>, crescemos junto com a nossa região. Começamos pequenos, conquistamos a confiança de gerações e nos tornamos referência em móveis, eletrodomésticos, material de construção, decoração, gás e móveis planejados.
@@ -383,7 +383,7 @@ function Index() {
 
                 <div className="grid grid-cols-3 gap-4 pt-4">
                   {[
-                    { number: "1986", label: "Fundação" },
+                    { number: "1985", label: "Fundação" },
                     { number: "40+", label: "Anos de história" },
                     { number: "6", label: "Setores" }
                   ].map((stat, i) => (
